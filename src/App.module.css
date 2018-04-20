@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.baner {
+    width: 100%;
+}
+
+/* .searchField {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+} */

@@ -1,0 +1,11 @@
+.container {
+    margin: 0 auto;
+    max-width: 450px;
+    width: 50%;
+}
+
+.media {
+    background-color: rgba(153, 153, 153, 0.59);
+    height: 0;
+    padding-top: 85%;
+}
