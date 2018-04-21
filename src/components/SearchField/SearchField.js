@@ -4,7 +4,7 @@ import TextField from 'material-ui/TextField';
 
 import styles from './SearchField.module.css';
 
-const searchField = () => (
+const searchField = props => (
     <div className={styles.container}>
         <center>
             <TextField
@@ -14,16 +14,17 @@ const searchField = () => (
                 type="search"
                 className={styles.textField}
                 margin="normal"
+                onChange={props.inputHandler}
             />
             <Button
                 style={{ backgroundColor: '#ed826c', color: 'white' }}
                 size="small"
                 variant="raised"
+                onClick={props.submitSearch}
             >
                 Search
-            </Button>   
+            </Button>
         </center>
-
     </div>
 );
 

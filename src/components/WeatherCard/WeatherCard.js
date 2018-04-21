@@ -13,14 +13,23 @@ const weatherCard = props => {
                 title={props.description}
             />
             <CardContent>
-                <Typography gutterBottom variant="headline" component="h1">
-                    Temperature: {props.temp} °C
+                <Typography variant="display3" gutterBottom>
+                    {props.city} {props.temp} °C
                 </Typography>
-                <Typography gutterBottom variant="headline" component="h2">
-                    Lizard
+                <Typography variant="display1" gutterBottom>
+                    {new Date().toLocaleDateString('en-GB', {
+                        weekday: 'long',
+                        year: 'numeric',
+                        month: 'numeric',
+                        day: 'numeric'
+                    })}
                 </Typography>
-                <Typography component="p">
+                <Typography gutterBottom variant="headline">
                     {props.description}
+                </Typography>
+                <Typography variant="subheading" gutterBottom>
+                    Pressure: {props.pressure} hPa Humidity: {props.humidity}%
+                    Wind: {props.wind} km/h
                 </Typography>
             </CardContent>
         </Card>
