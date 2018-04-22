@@ -10,8 +10,6 @@ const initialState = {
     pressure: null,
     humidity: null,
     wind: null,
-    accessToRequest: true,
-    timerUntilRequest: null,
     error: null,
     errorOccured: false,
     loading: false

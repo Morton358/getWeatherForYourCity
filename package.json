@@ -1,11 +1,14 @@
 {
     "name": "get_weather",
     "version": "0.1.0",
+    "author": "Morton358 <vovankovalchuk358@gmail.com>",
     "private": true,
+    "homepage": "http://Morton358.github.io/getWeatherForYourCity",
     "dependencies": {
         "@material-ui/icons": "^1.0.0-beta.42",
         "axios": "^0.18.0",
-        "dotenv": "^5.0.1",
+        "enzyme": "^3.3.0",
+        "enzyme-adapter-react-16": "^1.1.1",
         "material-ui": "^1.0.0-beta.42",
         "moment": "^2.22.1",
         "moment-timezone": "^0.5.16",
@@ -20,7 +23,9 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom"
+        "test": "react-scripts test --env=jsdom",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d build"
     },
     "extends": "react-app",
     "devDependencies": {

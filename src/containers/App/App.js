@@ -13,7 +13,7 @@ import { icons } from '../../share/icons';
 import axios from '../../share/axios-instance';
 import { checkValidityInput } from '../../share/utility';
 
-class App extends Component {
+export class App extends Component {
     state = {
         city: null,
         inputValid: true,
