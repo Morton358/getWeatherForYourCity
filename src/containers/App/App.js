@@ -11,14 +11,28 @@ import styles from './App.module.css';
 import * as actions from '../../store/actions/index';
 import { icons } from '../../share/icons';
 import axios from '../../share/axios-instance';
+import { checkValidityInput } from '../../share/utility';
 
 class App extends Component {
     state = {
-        city: ''
+        city: null,
+        inputValid: true,
+        inputTouched: false
     };
 
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.city !== this.props.city) {
+            window.scrollTo(0, 450);
+        }
+    }
+
     handleInputCity = event => {
-        this.setState({ city: event.target.value });
+        const validity = checkValidityInput(event.target.value);
+        this.setState({
+            city: event.target.value,
+            inputValid: validity,
+            inputTouched: true
+        });
     };
 
     handleSubmitSearchForm = event => {
@@ -60,6 +74,14 @@ class App extends Component {
                     </Grid>
                     <Grid item xs={12}>
                         <SearchField
+                            disableBtn={
+                                !this.state.inputValid ||
+                                !this.state.inputTouched
+                            }
+                            error={
+                                !this.state.inputValid &&
+                                this.state.inputTouched
+                            }
                             inputHandler={event => this.handleInputCity(event)}
                             submitSearch={event =>
                                 this.handleSubmitSearchForm(event)

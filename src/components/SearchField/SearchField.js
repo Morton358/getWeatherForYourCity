@@ -10,16 +10,24 @@ const searchField = props => (
             <TextField
                 id="search"
                 label="City:"
-                placeholder="Wroclaw"
+                error={props.error}
+                placeholder="Wrocław"
                 type="search"
                 className={styles.textField}
                 margin="normal"
                 onChange={props.inputHandler}
+                onKeyPress={ev => {
+                    if (ev.key === 'Enter') {
+                        props.submitSearch(ev);
+                    }
+                }}
             />
             <Button
-                style={{ backgroundColor: '#ed826c', color: 'white' }}
+                disabled={props.disableBtn}
+                // style={{ backgroundColor: '#ed826c', color: 'white' }}
                 size="small"
                 variant="raised"
+                color="secondary"
                 onClick={props.submitSearch}
             >
                 Search

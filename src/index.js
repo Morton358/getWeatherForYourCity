@@ -9,9 +9,8 @@ import 'moment/locale/pl';
 
 import reducer from './store/reducers/app';
 import { watchApp } from './store/sagas/index';
-import './index.css';
 import App from './containers/App/App';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 
 dotenv.config();
 
@@ -33,4 +32,4 @@ const app = (
 );
 
 ReactDOM.render(app, document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();

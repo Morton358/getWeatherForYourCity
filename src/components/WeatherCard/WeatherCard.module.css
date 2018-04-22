@@ -1,7 +1,7 @@
 .container {
     margin: 0 auto;
-    max-width: 450px;
-    width: 50%;
+    max-width: 500px;
+    width: 60%;
 }
 
 .media {
@@ -11,10 +11,8 @@
 
 .backgroundNight {
     background-color: #320c4a;
-    /* background-image: url('../../assets/images/astronomy-comet-constellation-631477.jpg'); */
 }
 
 .backgroundDay {
     background-color: #3a9fbf;
-    /* background-image: url('../../assets/images/blue_skies.jpg'); */
 }

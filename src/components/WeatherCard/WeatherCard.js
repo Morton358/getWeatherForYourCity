@@ -22,7 +22,10 @@ class WeatherCard extends Component {
                 />
                 <CardContent>
                     <Typography variant="display3" gutterBottom>
-                        {this.props.city} {this.props.temp} °C
+                        {this.props.city}
+                    </Typography>
+                    <Typography variant="display3" gutterBottom>
+                        {this.props.temp} °C
                     </Typography>
                     <Typography variant="display1" gutterBottom>
                         {new Date().toLocaleDateString('en-GB', {
@@ -36,8 +39,9 @@ class WeatherCard extends Component {
                         {this.props.description}
                     </Typography>
                     <Typography variant="subheading" gutterBottom>
-                        Pressure: {this.props.pressure} hPa Humidity:{' '}
-                        {this.props.humidity}% Wind: {this.props.wind} km/h
+                        Pressure: {this.props.pressure} hPa &nbsp;&nbsp;
+                        Humidity: {this.props.humidity}% &nbsp;&nbsp; Wind:{' '}
+                        {this.props.wind} km/h
                     </Typography>
                 </CardContent>
             </Card>
