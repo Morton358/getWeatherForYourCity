@@ -10,7 +10,7 @@ import 'moment/locale/pl';
 import reducer from './store/reducers/app';
 import { watchApp } from './store/sagas/index';
 import './index.css';
-import App from './App';
+import App from './containers/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 dotenv.config();

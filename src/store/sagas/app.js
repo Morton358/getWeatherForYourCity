@@ -1,6 +1,6 @@
 import { put } from 'redux-saga/effects';
 
-import axios from '../../axios-instance';
+import axios from '../../share/axios-instance';
 import * as actions from '../actions/index';
 // import cities from '../../share/cities';
 
@@ -11,7 +11,7 @@ export function* getWeatherSaga(action) {
         const city = response.data.name;
         const icon = response.data.weather[0].icon;
         const description = response.data.weather[0].description;
-        const tempCelsius = response.data.main.temp - 273.15;
+        const tempCelsius = Math.round(response.data.main.temp - 273.15);
         const pressure = response.data.main.pressure;
         const humidity = response.data.main.humidity;
         const wind = Math.round(response.data.wind.speed * 3.6, 2);

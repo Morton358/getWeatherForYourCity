@@ -5,7 +5,16 @@
 }
 
 .media {
-    background-color: rgba(153, 153, 153, 0.59);
     height: 0;
     padding-top: 85%;
+}
+
+.backgroundNight {
+    background-color: #320c4a;
+    /* background-image: url('../../assets/images/astronomy-comet-constellation-631477.jpg'); */
+}
+
+.backgroundDay {
+    background-color: #3a9fbf;
+    /* background-image: url('../../assets/images/blue_skies.jpg'); */
 }
