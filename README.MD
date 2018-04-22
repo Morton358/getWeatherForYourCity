@@ -2,8 +2,6 @@
 
 Web-app that displays weather forecast for chosen city.
 
-* [Demo]()
-
 ## Getting Started
 
 ##### Go to :
