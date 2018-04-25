@@ -2,7 +2,6 @@ import { put } from 'redux-saga/effects';
 
 import axios from '../../share/axios-instance';
 import * as actions from '../actions/index';
-// import cities from '../../share/cities';
 
 export function* getWeatherSaga(action) {
     yield put(actions.getWeatherStart());
