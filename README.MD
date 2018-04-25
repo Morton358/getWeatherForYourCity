@@ -2,6 +2,8 @@
 
 Web-app that displays weather forecast for chosen city.
 
+[DEMO](https://morton358.github.io/getWeatherForYourCity/)
+
 ## Getting Started
 
 ##### Go to :
